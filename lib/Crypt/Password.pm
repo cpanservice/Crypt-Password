@@ -69,7 +69,7 @@ our @valid_salt = ( "a".."z", "A".."Z", "0".."9", qw(/ \ ! @ # % ^) );
 
 sub _invent_salt {
     my $self = shift;
-    my $salt = map { $valid_salt[rand(@valid_salt)] } 1..8;
+    my $salt = join "", map { $valid_salt[rand(@valid_salt)] } 1..8;
     $self->salt($salt);
 }
 

@@ -3,12 +3,12 @@ use strict;
 use warnings;
 use Test::More;
 
-use_ok Crypt::Password;
+use_ok "Crypt::Password";
 
 {
     diag "hash something";
     my $text = "crypticatest";
-    my $c = Crypticate->new($text);
+    my $c = Crypt::Password->new($text);
     ok(!$c->password, "password vanishes");
     
     my $salt = $c->salt;
@@ -27,7 +27,7 @@ use_ok Crypt::Password;
     diag "supplied salt";
     my $text = "crypticatest";
     my $salt = "saltstring";
-    my $c = Crypticate->new($text, $salt);
+    my $c = Crypt::Password->new($text, $salt);
     is($c->salt, $salt, "salt attribute correct");
     like($c->crypted, qr{^\$5\$$salt\$...}, "crypted salt correct");
     my $crypted = $c->crypted;
