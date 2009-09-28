@@ -3,6 +3,8 @@ use strict;
 use warnings;
 use Test::More;
 
+use FindBin '$Bin';
+use lib "$Bin/../lib";
 use_ok "Crypt::Password";
 
 {
@@ -41,6 +43,14 @@ use_ok "Crypt::Password";
     ok(!$c->password, "password vanishes");
     ok($c->check($moretext), "password validates");
     ok(!$c->check($text), "old password invalidates");
+}
+
+{
+    diag "already crypted";
+    my $password = '$5$saltstring$5qW/dTqXgAu0LwfHPziKPiKAqN/hRfQbO0rfKVC1B1A';
+    my $c = Crypt::Password->new($password);
+    is($c->crypt, $password, "crypted-ness maintained");
+    is($c->salt, "saltstring", "extracted the correct salt");
 }
 
 done_testing();
