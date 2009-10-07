@@ -11,7 +11,7 @@ use inc::Module::Install;
 name            ("Crypt-Password");
 abstract        ("Utilities functions for Unix-style Hashed Passwords");
 author          ("Catalyst SRS Team <team-srs\@catalyst.net.nz>");
-version         0.01;
+version_from    ("lib/Crypt/Password.pm");
 license         ('artistic');
 
 requires        ("perl" => 5.008005);
