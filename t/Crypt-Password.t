@@ -8,7 +8,7 @@ use lib "$Bin/../lib";
 use_ok "Crypt::Password";
 
 {
-    diag "hash something";
+    # hash something
     my $text = "crypticatest";
     my $c = Crypt::Password->new($text);
     ok(!$c->password, "password vanishes");
@@ -26,7 +26,7 @@ use_ok "Crypt::Password";
 }
 
 {
-    diag "supplied salt";
+    # supplied salt
     my $text = "crypticatest";
     my $salt = "saltstring";
     my $c = Crypt::Password->new($text, $salt);
@@ -35,7 +35,7 @@ use_ok "Crypt::Password";
     my $crypted = $c->crypted;
     is("$c", $crypted, "crypted overloaded");
     
-    diag "supply another password";
+    # supply another password
     my $moretext = "something else";
     $c->password($moretext);
     isnt($c, $crypted, "password re-hashed");
@@ -46,7 +46,7 @@ use_ok "Crypt::Password";
 }
 
 {
-    diag "already crypted";
+    # already crypted
     my $password = '$5$saltstring$5qW/dTqXgAu0LwfHPziKPiKAqN/hRfQbO0rfKVC1B1A';
     my $c = Crypt::Password->new($password);
     is($c->crypt, $password, "crypted-ness maintained");
