@@ -19,7 +19,7 @@ use_ok "Crypt::Password";
     
     my $hash = $c->crypted;
     ok($hash, "hash appears");
-    like($hash, qr{^\$5\$$salt\$...}, "hash looks good");
+    like($hash, qr{^\$5\$\Q$salt\E\$...}, "hash looks good");
     
     ok($c->check($text), "validates original text");
     ok(!$c->check("$text and stuff"), "invalidates other text");
