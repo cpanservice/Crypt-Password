@@ -1,7 +1,7 @@
 package Crypt::Password;
 use Moose;
 
-our $VERSION = "0.01";
+our $VERSION = "0.02";
 
 # TODO write export crypt_password($plain) and check_password($plain, $hashed)
 
@@ -149,6 +149,10 @@ Given a string it defaults to using sha256 and generates a salt for you.  The
 salt can be supplied as the second argument to the constructor, or avoided by
 passing an empty string. The digest algorithm can be supplied as the third
 argument to the constructor.
+
+=head1 KNOWN ISSUES
+
+Doesn't seem to work on Darwin.
 
 =head1 SUPPORT, SOURCE
 

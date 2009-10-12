@@ -1,0 +1,9 @@
+Revision history for Crypt::Password
+
+0.02 2009-10-13
+ * improve tests
+ * add known issue about not working on Darwin
+
+0.01 2009-10-07
+ * initial revision
+
