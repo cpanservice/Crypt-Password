@@ -1,7 +1,7 @@
 #!/usr/bin/perl
 use strict;
 use warnings;
-use Test::More;
+use Test::More 'no_plan';
 
 use FindBin '$Bin';
 use lib "$Bin/../lib";
