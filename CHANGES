@@ -1,5 +1,8 @@
 Revision history for Crypt::Password
 
+0.04 2009-10-17
+* test fixes; avoid isnt(), plan once
+
 0.03 2009-10-16
 * compat woe; test salt lengths 1-16 and diag throughout
 

@@ -1,7 +1,7 @@
 package Crypt::Password;
 use Moose;
 
-our $VERSION = "0.03";
+our $VERSION = "0.04";
 
 # TODO write export crypt_password($plain) and check_password($plain, $hashed)
 
