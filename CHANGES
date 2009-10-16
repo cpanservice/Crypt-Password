@@ -1,5 +1,8 @@
 Revision history for Crypt::Password
 
+0.03 2009-10-16
+* compat woe; test salt lengths 1-16 and diag throughout
+
 0.02 2009-10-13
  * improve tests
  * add known issue about not working on Darwin
