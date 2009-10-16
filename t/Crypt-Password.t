@@ -149,7 +149,7 @@ for my $saltlength (1..16) {
 	# supply another password
 	my $moretext = "something else";
 	$c->password($moretext);
-	isnt($c, $crypted, "password re-hashed");
+	ok("$c" ne "$crypted", "password re-hashed");
 	is($c->salt, $salt, "salt stays the same");
 	ok(!$c->password, "password vanishes");
 	ok($c->check($moretext), "password validates");
