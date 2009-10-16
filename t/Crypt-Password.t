@@ -167,5 +167,4 @@ for my $saltlength (1..16) {
     ok($c->check("Thiruvaaimozhi"), "validates original string");
 }
 
-done_testing();
 
