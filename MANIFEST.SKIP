@@ -2,6 +2,7 @@
 ~$
 ^Makefile(.old)?$
 ^MANIFEST.SKIP$
+#$
 ^\.git
 ^blib/
 ^debian/
