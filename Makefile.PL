@@ -17,5 +17,6 @@ license         ('artistic');
 requires        ("perl" => 5.008005);
 requires        ("Moose" => 0.54);
 
+repository 'http://github.com/st3vil/Crypt-Password';
 &WriteAll;
 
